@@ -640,7 +640,6 @@ label {
 }
 
 
-
 /*====================
 7. Site title css
 ======================*/
@@ -678,6 +677,12 @@ label {
 
 .site-title span{
   color: #fda31b;
+}
+
+.pricing-area .site-titles{
+  color: #014DAB;
+  padding-top: 2rem;
+  text-align: center;
 }
 
 .site-heading p {
@@ -1964,6 +1969,10 @@ label {
 
 .course-area{
   position: relative;
+}
+
+.course-area .site-titles{
+  line-height: 2.5rem;
 }
 
 .course-item{
@@ -4369,7 +4378,7 @@ color: #014DAB;
 
 .pricing-item{
   position: relative;
-  padding: 20px 40px;
+  padding: 20px;
   text-align: center;
   border-radius: 50px 50px 50px 0;
   background: var(--color-white);
@@ -4431,7 +4440,7 @@ color: #014DAB;
 }
 
 .pricing-amount{
-  font-size: 60px;
+  font-size: 45px;
   color: var(--theme-color);
 }
 
@@ -4496,6 +4505,11 @@ color: #014DAB;
 
 .actives{
   color: #fda31b;
+}
+
+.group-lesson-row{
+  justify-content: space-evenly;
+  gap: 2rem;
 }
 
 /*====================
@@ -5024,7 +5038,7 @@ color: #014DAB;
   margin-bottom: 54px;
 }
 
-.terms-content:first-child {
+.terms-content {
   margin-top: -3px;
 }
 
@@ -5033,19 +5047,40 @@ color: #014DAB;
 }
 
 .terms-content h3 {
+  margin-top: 2rem;
   margin-bottom: 23px;
   position: relative;
+  clear:both;
 }
 
-.terms-content p:not(:last-child) {
+.terms-content p {
   margin-bottom: 26px;
+/* text-align: justify; */
 }
 
-.terms-list li:not(:last-child) {
+.terms-list li {
   margin-bottom: 16px;
 }
 
+hr{
+  display: block;
+}
+.inside-img{
+ height: 300px;
+  width: 412px;
+ float: left;
+ margin-right: 2rem;
+ margin-bottom: 2rem;
+ display: block;
+}
 
+@media (max-width: 768px) {
+  .inside-img{
+    margin-bottom: 10rem;
+    float: none;
+    margin: auto;
+   }
+}
 
 /*====================
 52. How Apply
@@ -6365,6 +6400,3 @@ color: #014DAB;
   height: 100%;
   opacity: .95;
 }
-
-
-
