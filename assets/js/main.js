@@ -303,6 +303,44 @@ Version         : 1.0
 
 })(jQuery);
 
+ /*============ What's Inside Our Lesson=================*/
+  let currentIndex = 0;
+  const slider = document.getElementById('slider');
+  const totalSlides = slider.children.length;
+  let slideInterval;
+
+  function moveSlide(direction) {
+    currentIndex += direction;
+
+    if (currentIndex < 0) {
+      currentIndex = totalSlides - 1;
+    } else if (currentIndex >= totalSlides) {
+      currentIndex = 0;
+    }
+
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function startAutoSlide() {
+    slideInterval = setInterval(() => {
+      moveSlide(1);
+    }, 5000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(slideInterval);
+  }
+
+  // Start auto-slide when page loads
+  startAutoSlide();
+
+  // Pause on hover
+  const sliderContainer = document.querySelector('.slider-container');
+  sliderContainer.addEventListener('mouseenter', stopAutoSlide);
+  sliderContainer.addEventListener('mouseleave', startAutoSlide);
+
+
+
 
 
 
