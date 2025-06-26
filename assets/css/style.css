@@ -1235,7 +1235,7 @@ label {
     max-height: 220px;
     overflow: hidden;
     overflow-y: auto;
-    padding: 0 20px;
+    padding: 0 20px 15px;
     background-color: var(--color-white);
   }
 
@@ -5039,6 +5039,20 @@ label {
   }
 }
 
+.terms-content h3 {
+  margin-top: 2rem;
+  margin-bottom: 23px;
+  line-height: 2.5rem;
+  position: relative;
+  clear: both;
+}
+
+.terms-content h4 {
+  font-size: 20px;
+  margin-bottom: .75rem;
+  line-height: 1.7rem;
+}
+
 
 
 
@@ -5058,7 +5072,7 @@ label {
   margin-top: 37px;
 }
 
-.terms-content .link a{
+.terms-content .link a {
   color: #014DAB;
   text-decoration: underline;
   font-weight: 600;
@@ -5095,6 +5109,12 @@ label {
   margin-bottom: 10px;
 }
 
+.terms-content .inside {
+  width: 522px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
 .terms-list li {
   margin-bottom: 16px;
 }
@@ -5109,24 +5129,14 @@ label {
   clear: both;
 }
 
-.inside-flex {
-  display: flex;
-  justify-content: space-between;
-
-}
-
-.inside-flex img {
-  flex-basis: 45%;
-}
-
 @media (max-width: 768px) {
-  .inside-img {
-    margin: auto;
-    margin-bottom: 1rem;
-    float: none;
 
-    width: 400px;
-    height: 300px;
+  .terms-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .terms-content h4 {
+    font-size: 1.2rem;
   }
 }
 
@@ -6449,7 +6459,7 @@ label {
   opacity: .95;
 }
 
- /*============= What's Inside Our Lesson ====================*/
+/*============= What's Inside Our Lesson ====================*/
 .slider-wrapper {
   position: relative;
   max-width: 600px;
@@ -6479,10 +6489,10 @@ label {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   font-size: 1.5rem;
-  padding: 1rem ;
+  padding: 1rem;
   border: none;
   cursor: pointer;
   z-index: 1;
@@ -6498,5 +6508,79 @@ label {
 }
 
 .arrow:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.img1 {
+  grid-column: 1 / 3;
+  width: 100%;
+  height: 260px;
+}
+
+.img2 {
+  grid-column: 3 / 5;
+  width: 100%;
+  height: 245px;
+}
+
+.img3 {
+  grid-column: 1;
+}
+
+.img4 {
+  grid-column: 2;
+}
+
+.img5 {
+  grid-column: 3;
+}
+
+@media (max-width: 768px) {
+
+  .slider-wrapper {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 2rem;
+  }
+
+  .slider img{
+    object-fit: unset;
+    height: auto;
+  }
+
+  .arrow.left {
+    left: 10px;
+  }
+
+  .arrow.right {
+    right: 10px;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image-grid img {
+    width: 100%;
+  }
+
+  .img1,
+  .img2 {
+    grid-column: 1 / -1;
+    /* full width */
+  }
+
+  .img5 {
+    grid-column: 1 / 2;
+    /* full width below img3 & img4 */
+  }
 }
