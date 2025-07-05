@@ -1970,7 +1970,10 @@ label {
   }
 }
 
-
+.pricing-feature ul small{
+  text-align: center;
+  justify-content: right;
+}
 
 /*====================
 20. Course css 
@@ -1995,6 +1998,7 @@ label {
   border-radius: 50px 50px 50px 0;
   margin-bottom: 25px;
   box-shadow: var(--box-shadow);
+  /* border: 2px solid #014dab; */
 }
 
 .course-tag {
@@ -4489,7 +4493,13 @@ label {
   top: 0;
 }
 
-.pricing-feature .theme-btn {
+.pricing-feature ul small{
+  text-align: right;
+  margin: auto;
+}
+
+.pricing-feature .theme-btn,
+.class-schedule-detils .theme-btn {
   width: 100%;
 }
 
@@ -4523,6 +4533,19 @@ label {
 
 .pricing-item.active .theme-btn::before {
   background: var(--color-white);
+}
+
+.class-schedule-detils ul {
+  margin-bottom: 1.5rem;
+}
+
+.class-schedule-detils ul li {
+  position: relative;
+  margin: 10px 0;
+}
+
+.schedule{
+  font-size: 20px;
 }
 
 
