@@ -682,6 +682,20 @@ label {
   position: relative;
 }
 
+@media (max-width: 760px) {
+
+  .site-title{
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .site-title{
+    font-size: 30px;
+  }
+}
+
 .site-title span {
   color: #fda31b;
 }
@@ -1771,7 +1785,7 @@ label {
   z-index: -1;
   background-color: var(--theme-color2);
   border-radius: 50px;
-  animation: ripple-wave 1s linear infinite;
+  animation: ripple-wave .5s linear infinite;
   -webkit-transform: scale(1);
   transform: scale(1);
   transition: all 0.5s ease-in-out;
@@ -2158,7 +2172,21 @@ label {
   }
 }
 
-
+/*====================
+21. Testimonial Video
+======================*/
+.testimonial-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-video iframe{
+  border-radius: 40px 40px 40px 0;
+  width: 100%;
+  height: 300px;
+  padding-bottom: 20px;
+  border-bottom: 25px;
+}
 
 
 /*====================
@@ -4360,11 +4388,61 @@ label {
   justify-content: center;
   border-radius: 5px;
   height: 350px;
-  z-index: 100;
+  overflow: hidden;
+  /* background-color: red; */
 }
 
-.video-wrapper img {
+.video-btn{
+ z-index: 100;
+ display: inline-block;
+}
+
+.play-image{
+  width: 50px;
+  height: 50x;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.video-btn::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: var(--theme-color2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation:  ripple-wave 1s linear infinite;
+  -webkit-transform: scale(1);
+            transform: scale(1);
+            transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+
+@keyframes ripple-wave {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  } 
+}
+
+.video-wrapper a img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  height: auto;
   border-radius: 12px;
+  display: block;
 }
 
 .video-area .play-btn {
@@ -4380,12 +4458,34 @@ label {
   transform: translate(-50%, -50%);
 }
 
+.testimonial-wrapper{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.testimonial-text{
+  flex-basis: 33.3333%;
+}
+
+.testimonial-img{
+  flex-basis: 66.6666%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
 @media all and (max-width: 767px) {
   .video-wrapper {
     height: 250px;
   }
 }
 
+.course-img iframe{
+  border-radius: 25px;
+}
 
 
 /*===================
