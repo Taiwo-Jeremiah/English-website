@@ -82,7 +82,7 @@ Table of contents
 70. Footer css 
 71. Home 2
 72. Home 3
-
+73. Payments
 =======================================================*/
 
 
@@ -681,6 +681,9 @@ label {
   margin-bottom: 0;
   position: relative;
 }
+.reviewer-name{
+  font-size: 46px;
+}
 
 @media (max-width: 760px) {
 
@@ -1246,7 +1249,7 @@ label {
   }
 
   .navbar-collapse {
-    max-height: 220px;
+    /* max-height: 220px; */
     overflow: hidden;
     overflow-y: auto;
     padding: 0 20px 15px;
@@ -1971,10 +1974,16 @@ label {
   color: var(--theme-color);
 }
 
+.about-area .about-left iframe{
+    border-radius: 20px;
+}
 
 @media all and (max-width: 991px) {
   .about-right {
     margin-top: 30px;
+  }
+  .about-area .about-left iframe{
+    margin-left: .6rem;
   }
 }
 
@@ -2169,6 +2178,20 @@ label {
 @media all and (max-width: 991px) {
   .course-sidebar {
     margin-top: 40px;
+  }
+
+  @media (max-width: 1023px) {
+    .py-120 {
+      padding: 100px 0;
+    }
+  
+  }
+
+  @media (max-width: 767px) {
+    .py-120 {
+      padding: 60px 0;
+    }
+  
   }
 }
 
@@ -3848,6 +3871,16 @@ label {
   color: #014DAB;
 }
 
+.group-schedule .theme-btns {
+  color: #014DAB;
+  font-size: 17px;
+}
+
+.group-schedule .theme-btns:hover {
+  color: #fda31b;
+ 
+}
+
 .widget .widget-title {
   padding-bottom: 10px;
   margin-bottom: 30px;
@@ -4703,6 +4736,7 @@ label {
   font-size: 20px;
   color: var(--color-dark);
   box-shadow: none !important;
+  line-height: 1.5rem;
 }
 
 .accordion-button:not(.collapsed) {
@@ -4722,7 +4756,6 @@ label {
     font-size: 16px;
   }
 }
-
 
 
 /*====================
@@ -5606,6 +5639,7 @@ label {
   margin-left: 30px;
   position: relative;
   z-index: 1;
+    padding: 0 60px 0 0;
 }
 
 .activity .content-img::before {
@@ -5614,7 +5648,7 @@ label {
   left: -30px;
   top: -30px;
   bottom: -30px;
-  width: 80%;
+  width: 100%;
   border: 7px solid var(--theme-color2);
   border-radius: 100px 100px 100px 0;
   z-index: -1;
@@ -6696,4 +6730,45 @@ label {
     grid-column: 1 / 2;
     /* full width below img3 & img4 */
   }
+}
+
+
+/*====================
+69. Payment css 
+======================*/
+.payment-description{
+  /* text-align: center;*/
+} 
+
+.payment-area h2{
+  font-size: 40px;
+ margin-bottom: -0.5rem;
+}
+
+.payment-area h2 span{
+  color: #fda31b;
+}
+
+.payment-area h3{
+  font-size: 25px;
+  padding-bottom: 5px;
+}
+
+.payment-flex a{
+  color: #fff;
+  margin: .5rem 0 0;
+}
+
+.payment-flex a:hover i{
+  color:#fff;
+  transform: translateX(5px);
+  transition: .3s ease-in;
+}
+
+.payment-flex .course{
+  margin-top: 1rem;
+}
+
+.payment .contact-form-header{
+  margin-bottom: 20px;
 }
